@@ -42,11 +42,9 @@ class ViewController_Bottoni: UIViewController {
     
     @IBAction func btnRandomPress(_ sender: Any) {
         //Sfondo generato da colore RGB casuale
-        let num1 = Int.random(in: 0..<256)
-        let num2 = Int.random(in: 0..<256)
-        let num3 = Int.random(in: 0..<256)
+        //let num1 = Int.random(in: 0..<256)
         UIView.animate(withDuration: 0.5) {
-            self.ViewBottoni.backgroundColor = UIColor.init(red: CGFloat(num1/255), green: CGFloat(num2/255), blue: CGFloat(num3/255), alpha: 1)
+            self.ViewBottoni.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
         }
         coloreSfondo = ViewBottoni.backgroundColor!
     }
